@@ -1,0 +1,7 @@
+﻿E:\VS2017\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: 中间目录(Debug\)包含从另一个项目(Project4.vcxproj)共享的文件。   这会导致错误的清除和重新生成行为。
+  game.c
+  test.c
+  正在生成代码...
+e:\c\project4\project4\game.c(145): warning C4715: “IF_WIN”: 不是所有的控件路径都返回值
+e:\c\project4\project4\game.c(160): warning C4715: “is_full”: 不是所有的控件路径都返回值
+  Project4.vcxproj -> E:\C\Project4\Debug\game sanziqi.exe
