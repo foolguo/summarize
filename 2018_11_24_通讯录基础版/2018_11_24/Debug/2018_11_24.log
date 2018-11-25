@@ -1,0 +1,4 @@
+﻿  address_list.c
+e:\c\2018_11_24\2018_11_24\address_list.c(136): warning C4133: “函数”: 从“address_list *”到“const char *”的类型不兼容
+e:\c\2018_11_24\2018_11_24\address_list.c(63): warning C4715: “find”: 不是所有的控件路径都返回值
+  2018_11_24.vcxproj -> E:\C\2018_11_24\Debug\2018_11_24.exe
