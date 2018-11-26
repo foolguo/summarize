@@ -1,5 +1,5 @@
 #define _CRT_SECURE_NO_DEPRECATE 1
-
+//
 //2.实现一个通讯录；
 //通讯录可以用来存储1000个人的信息，每个人的信息包括：
 //姓名、性别、年龄、电话、住址
@@ -56,9 +56,9 @@ int main()
 			case 2:
 			{
 				char p[6] = { 0 };
-				printf("请输入要删除联系人的名字\n");
+				printf("请输入要删除人的名字\n");
 				scanf("%s", p);
-				del(addr, p);
+				del(addr,p);
 				break;
 			}
 			case 3:
@@ -66,9 +66,14 @@ int main()
 				char p[6] = { 0 };
 				printf("请输入要查找联系人的名字\n");
 				scanf("%s", p);
-				find(addr, p);
-				printf("查找联系人的的位置\n");
-				printf("%d\n", find(addr, p));
+				if (find(addr, p) >= 0)
+				{
+					printf("%d\n", find(addr, p));
+				}
+				else
+				{
+					printf("没有该联系人的信息\n");
+				}
 				break;
 			}
 			case 4:
@@ -99,7 +104,7 @@ int main()
 			}
 			case 8:
 			{
-				sever(addr, SZ);
+				sever(addr);
 				break;
 			}
 			}

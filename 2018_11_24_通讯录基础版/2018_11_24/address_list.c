@@ -25,12 +25,20 @@ void add(address_list* addr, int sz)//添加联系人信息
 		printf("通讯录已满\n");
 
 }
-void del(address_list* addr, char* p)// 首先查找联系人，然后删除；
+void del(address_list* addr,char *p)// 首先查找联系人，然后删除；
 {
-	int i=find(addr, p);
-	memset(addr + i,0,sizeof(address_list));
-	memmove(addr + i, addr + i + 1, sizeof(address_list)*(SZ-i-1));
-	flag--;
+	if (flag == 0)
+	{
+		printf("当前通信录为空\n");
+	}
+	else
+	{
+		
+		int i = find(addr, p);
+		memset(addr + i, '*', sizeof(address_list));
+		memmove(addr + i, addr + i + 1, sizeof(address_list)*(SZ - i - 1));
+		flag--;
+	}
 }
 int find(address_list* addr, char* str)//查找联系人，  长度一样， 每个字符一样
 {
@@ -38,19 +46,10 @@ int find(address_list* addr, char* str)//查找联系人，  长度一样， 每个字符一样
 	int i = 0,j=0;
 	for (i = 0; i < flag; i++)
 	{
-		p = str;
-		if (strlen((addr + i)->name) == strlen(p))
-		{
-			while (p)
-			{
-				if (*((addr + i)->name + j) == *p)
-					p++;
-				else
-					break;
-			}
-			if (p == '\0')
-				return i;
-		}
+		if (strcmp((addr + i)->name, p) == 0)
+			return i;
+		else
+			return -1;
 	}
 	//while (left <= right)
 	//{
@@ -75,7 +74,7 @@ void modify(address_list* addr, char* p)// 修改指定联系人信息
 	scanf("%s", (addr + i)->tel);
 	printf("modify address:\n");
 	scanf("%s", (addr + i)->address);
-
+	
 }
 
 void display(address_list* addr)
@@ -99,7 +98,7 @@ void empty(address_list*  addr)
 	int i = 0;
 	for (i = 0; i < flag; i++)
 	{
-		memset(addr + i, 0, sizeof(address_list));
+		memset(addr + i, "0", sizeof(address_list));
 	}
 	flag = 0;
 }

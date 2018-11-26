@@ -14,7 +14,7 @@ typedef struct address_list
 } address_list;
 #define SZ 1000
 void add(address_list* addr, int sz);
-void del(address_list* addr, char* p);
+void del(address_list* addr, char *p);
 int find(address_list* addr, char* p);
 void modify(address_list* addr, char* p);
 void display(address_list* addr);

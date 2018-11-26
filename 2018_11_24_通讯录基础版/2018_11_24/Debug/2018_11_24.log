@@ -1,4 +1,8 @@
 ﻿  address_list.c
-e:\c\2018_11_24\2018_11_24\address_list.c(136): warning C4133: “函数”: 从“address_list *”到“const char *”的类型不兼容
-e:\c\2018_11_24\2018_11_24\address_list.c(63): warning C4715: “find”: 不是所有的控件路径都返回值
-  2018_11_24.vcxproj -> E:\C\2018_11_24\Debug\2018_11_24.exe
+e:\c\2018_11_24_通讯录基础版\2018_11_24\address_list.c(101): warning C4047: “函数”:“int”与“char [2]”的间接级别不同
+e:\c\2018_11_24_通讯录基础版\2018_11_24\address_list.c(101): warning C4024: “memset”: 形参和实参 2 的类型不同
+e:\c\2018_11_24_通讯录基础版\2018_11_24\address_list.c(135): warning C4133: “函数”: 从“address_list *”到“const char *”的类型不兼容
+  test.c
+  正在生成代码...
+e:\c\2018_11_24_通讯录基础版\2018_11_24\address_list.c(62): warning C4715: “find”: 不是所有的控件路径都返回值
+  2018_11_24.vcxproj -> E:\C\2018_11_24_通讯录基础版\Debug\2018_11_24.exe
